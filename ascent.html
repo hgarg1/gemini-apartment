@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHERIA | The Ascent</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <div id="loader"><div class="loader-text">ASCENDING...</div></div>
+    <div class="page-transition"></div>
+    <div id="canvas-container"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <!-- HUD -->
+    <div class="hud-element hud-logo"><a href="./index.html" class="logo-v">AETHERIA</a></div>
+    <div class="hud-element hud-menu-trigger">
+        <span class="menu-label">INDEX</span>
+        <button class="menu-btn" id="menuToggle"><span></span><span></span></button>
+    </div>
+    
+    <!-- ASCENT UI HUD -->
+    <div class="ascent-progress"><div class="ascent-bar" id="progressBar" style="height: 0%;"></div></div>
+    <div class="ascent-floor-hud" id="floorDisplay">000</div>
+
+    <div class="hud-element hud-coords">
+        <span>SECTOR: ASCENT</span>
+        <span>HUD-LEVEL: <span id="floorCoord">000</span></span>
+        <span>STATUS: ACTIVE</span>
+    </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-nav">
+            <a href="./index.html" class="menu-link"><span>00</span>HOME</a>
+            <a href="./vision.html" class="menu-link"><span>01</span>THE VISION</a>
+            <a href="./ascent.html" class="menu-link"><span>02</span>THE ASCENT</a>
+            <a href="./residences.html" class="menu-link"><span>03</span>RESIDENCES</a>
+            <a href="./tour.html" class="menu-link"><span>04</span>ACCESS</a>
+        </div>
+    </div>
+
+    <!-- Sticky Storytelling Section -->
+    <div class="story-wrapper" id="journey">
+        <div class="section-number" style="position: absolute; top: 10vh; left: 5vw; z-index: 5;">01-04</div>
+        <div class="story-sticky">
+            <div class="story-bg">
+                <img src="nanobanana-output/ultraluxury_private_spa_and_well.png" class="story-img active">
+                <img src="nanobanana-output/ultraluxury_private_spa_and_well_1.png" class="story-img">
+                <img src="nanobanana-output/ultraluxury_private_spa_and_well_2.png" class="story-img">
+                <img src="nanobanana-output/ultraluxury_private_spa_and_well_3.png" class="story-img">
+            </div>
+            
+            <div class="story-content-box">
+                <div class="story-text active">
+                    <div class="story-sub">LEVEL 12-24</div>
+                    <h3>THE OASIS</h3>
+                    <div class="story-description">
+                        <p>A private sanctuary designed to cleanse the spirit before ascending to your residence. Water, light, and silence converge in a space where gravity feels suspended.</p>
+                        <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.5; font-family: 'Syncopate';">ZONE: WELLNESS</p>
+                    </div>
+                </div>
+                
+                <div class="story-text">
+                    <div class="story-sub">LEVEL 42-60</div>
+                    <h3>THE ARCHIVE</h3>
+                    <div class="story-description">
+                        <p>A vault of knowledge and stillness. Floor-to-ceiling volumes of curated thought, leather-bound history, and the subtle scent of aged oak and tranquility.</p>
+                        <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.5; font-family: 'Syncopate';">ZONE: INTELLECTUAL</p>
+                    </div>
+                </div>
+                
+                <div class="story-text">
+                    <div class="story-sub">LEVEL 82-100</div>
+                    <h3>THE ZENITH</h3>
+                    <div class="story-description">
+                        <p>Living above the clouds. Where the horizon becomes your only neighbor, and the city lights below are but a reflection of the stars above.</p>
+                        <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.5; font-family: 'Syncopate';">ZONE: RESIDENTIAL</p>
+                    </div>
+                </div>
+                
+                <div class="story-text">
+                    <div class="story-sub">LEVEL 104</div>
+                    <h3>THE VOID</h3>
+                    <div class="story-description">
+                        <p>The pure essence of space. A singular residence spanning the entire crown of the tower. Minimalist architecture meeting the infinite sky.</p>
+                        <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.5; font-family: 'Syncopate';">ZONE: CROWN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div style="height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #000; position: relative; z-index: 10;">
+        <h2 style="font-family: 'Libre Baskerville'; font-size: 3rem; color: var(--gold); margin-bottom: 4rem; text-align: center;">BEYOND THE<br>ZENITH</h2>
+        <a href="./residences.html" class="btn-premium">ENTER THE COLLECTION</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

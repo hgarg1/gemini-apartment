@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHERIA | Access</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <div id="loader"><div class="loader-text">ESTABLISHING LINK...</div></div>
+    <div class="page-transition"></div>
+    <div id="canvas-container"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <!-- HUD -->
+    <div class="hud-element hud-logo"><a href="./index.html" class="logo-v">AETHERIA</a></div>
+    <div class="hud-element hud-menu-trigger">
+        <button class="menu-btn" id="menuToggle"><span></span><span></span></button>
+    </div>
+    <div class="hud-element hud-coords"><span>SECTOR: CONTACT</span><span>STATUS: SECURE</span></div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-nav">
+            <a href="./index.html"><span>00</span>HOME</a>
+            <a href="./vision.html"><span>01</span>THE VISION</a>
+            <a href="./ascent.html"><span>02</span>THE ASCENT</a>
+            <a href="./residences.html"><span>03</span>RESIDENCES</a>
+            <a href="./tour.html"><span>04</span>ACCESS</a>
+        </div>
+    </div>
+
+    <!-- Brutalist Form -->
+    <div class="form-container">
+        <h1 style="font-family: 'Libre Baskerville'; font-size: 4rem; color: var(--white); margin-bottom: 2rem; font-style: italic;">REQUEST<br>ACCESS</h1>
+        <p style="font-family: 'Syncopate'; font-size: 0.7rem; color: var(--gold); letter-spacing: 0.4em; margin-bottom: 4rem;">PRIVATE VIEWING BY INVITATION ONLY</p>
+        
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-input" required id="name">
+                <label class="form-label" for="name">FULL NAME</label>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" class="form-input" required id="email">
+                <label class="form-label" for="email">EMAIL CREDENTIAL</label>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" class="form-input" required id="org">
+                <label class="form-label" for="org">ORGANIZATION / AFFILIATION</label>
+            </div>
+            
+            <button type="submit" class="btn-premium" style="width: 100%; justify-content: center; margin-top: 2rem;">SUBMIT CREDENTIALS</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <h2>AETHERIA</h2>
+            </div>
+            <div class="footer-links">
+                <h4>NAVIGATION</h4>
+                <ul>
+                    <li><a href="./index.html">RETURN TO ZENITH</a></li>
+                    <li><a href="./vision.html">THE VISION</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>LEGAL</h4>
+                <ul>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">TERMS OF ACCESS</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

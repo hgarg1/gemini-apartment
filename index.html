@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHERIA | The Monolith of Modernity</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader"><div class="loader-text">INITIALIZING ZENITH SYSTEM...</div></div>
+    
+    <!-- Transition Overlay -->
+    <div class="page-transition"></div>
+
+    <!-- 3D Background Container -->
+    <div id="canvas-container"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <!-- HUD NAVIGATION -->
+    <div class="hud-element hud-logo">
+        <div class="status-indicator">
+            <div class="status-dot"></div>
+            <span>ZENITH STATUS: OPTIMAL</span>
+        </div>
+        <a href="./index.html" class="logo-v">AETHERIA</a>
+    </div>
+
+    <div class="hud-element hud-menu-trigger">
+        <button class="menu-btn" id="menuToggle">
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class="hud-element hud-coords">
+        <span>LOC: 40.7128° N, 74.0060° W</span>
+        <span id="currentTime">HUD-TIME: 00:00:00</span>
+        <span>ZONE: AETHERIA.ZENITH</span>
+    </div>
+
+    <div class="hud-element hud-inquiry">
+        <a href="./tour.html" class="btn-vertical">INQUIRE</a>
+    </div>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-nav">
+            <a href="./index.html" class="menu-link"><span>00</span>HOME</a>
+            <a href="./vision.html" class="menu-link"><span>01</span>THE VISION</a>
+            <a href="./ascent.html" class="menu-link"><span>02</span>THE ASCENT</a>
+            <a href="./residences.html" class="menu-link"><span>03</span>RESIDENCES</a>
+            <a href="./tour.html" class="menu-link"><span>04</span>ACCESS</a>
+        </div>
+    </div>
+
+    <!-- Hero Portal -->
+    <header id="hero">
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline poster="nanobanana-output/ultraluxury_modern_apartment_pen.png">
+                <source src="https://images.pexels.com/video-files/3249058/3249058-uhd_2560_1440_25fps.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-label" style="font-family: 'Syncopate'; font-size: 0.65rem; letter-spacing: 1em; color: var(--gold); margin-bottom: 2.5rem; display: block; opacity: 0.8;">ARCHITECTURAL SYMPHONY</span>
+            <h1 class="hero-title">
+                <span style="display: block;">AETHERIA</span>
+                <span style="display: block;">HEIGHTS</span>
+            </h1>
+            <p style="font-family: 'Syncopate'; font-size: 0.55rem; letter-spacing: 0.6em; opacity: 0.4; margin-top: 3rem;">REDEFINING THE VERTICAL HORIZON</p>
+            
+            <div style="margin-top: 5rem;">
+                <a href="#about" class="btn-premium">BEGIN THE EXPERIENCE</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 01: Vision -->
+    <section id="about">
+        <div class="section-number">01</div>
+        <div class="split-layout">
+            <div class="split-left">
+                <div class="architectural-img reveal">
+                    <img src="nanobanana-output/ultraluxury_modern_apartment_pen.png" alt="Vision Interior">
+                </div>
+            </div>
+            <div class="split-right">
+                <div class="editorial-text">
+                    <h2>THE VISION</h2>
+                    <p>Aetheria is an exercise in restraint and precision. We have stripped away the superfluous to create a space that breathes. Here, the architecture is the canvas, and the light is the master.</p>
+                    <p>Located at the intersection of stillness and the city, Aetheria Heights stands as a singular monolith in a world of complexity.</p>
+                    <a href="./vision.html" class="btn-premium">VIEW THE BLUEPRINTS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 02: Materiality (NEW) -->
+    <section id="materiality" style="background: #050505;">
+        <div class="section-number">02</div>
+        <div class="split-layout">
+            <div class="editorial-text">
+                <h2 style="font-size: 3.5rem;">MATERIALITY</h2>
+                <p>We source the earth’s most resilient and expressive elements. Nero Marquina marble from the Basque Country, hand-brushed brass from artisanal foundries, and silk-infused glass panels.</p>
+                <div class="material-grid">
+                    <div class="material-card">
+                        <img src="nanobanana-output/macro_photography_of_highend_arc.png">
+                        <div class="material-label">NERO MARQUINA</div>
+                    </div>
+                    <div class="material-card">
+                        <img src="nanobanana-output/macro_photography_of_highend_arc_1.png">
+                        <div class="material-label">BRUSHED BRASS</div>
+                    </div>
+                </div>
+            </div>
+            <div class="split-right">
+                <div class="architectural-img reveal" style="height: 70vh;">
+                    <img src="nanobanana-output/abstract_architectural_texture_d_1.png" alt="Detail Shot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 03: Ascent -->
+    <section id="ascent-teaser">
+        <div class="section-number">03</div>
+        <div style="text-align: center; max-width: 900px; margin: 0 auto;">
+            <h2 style="font-family: 'Libre Baskerville'; font-size: clamp(3rem, 10vw, 6rem); font-style: italic; color: #fff; margin-bottom: 3rem;">THE ASCENT</h2>
+            <p style="font-size: 1.2rem; color: #888; font-weight: 200; line-height: 1.8; margin-bottom: 5vh;">
+                A transition from the bedrock of Manhattan to the Level 104 Crown. The journey upward is a curated experience through water, light, and silence.
+            </p>
+            <div class="architectural-img reveal" style="height: 55vh; margin-bottom: 5vh;">
+                <img src="nanobanana-output/ultraluxury_private_spa_and_well_2.png" alt="Ascent View">
+            </div>
+            <a href="./ascent.html" class="btn-premium">START THE JOURNEY</a>
+        </div>
+    </section>
+
+    <!-- Section 04: Residences -->
+    <section id="residences-preview">
+        <div class="section-number">04</div>
+        <h2 style="font-family: 'Libre Baskerville'; font-size: 4rem; font-style: italic; color: #fff; margin-bottom: 8vh; text-align: center;">THE COLLECTION</h2>
+        <div class="residence-grid">
+            <div class="residence-card reveal" style="grid-column: span 6;">
+                <img src="nanobanana-output/ultraluxury_modern_apartment_pen_1.png" alt="Azure Suite">
+                <div class="residence-info">
+                    <h3 style="font-family: 'Syncopate'; font-size: 0.8rem; letter-spacing: 0.2em;">THE AZURE</h3>
+                    <p style="font-size: 0.6rem; opacity: 0.6; margin-top: 10px; font-family: 'Syncopate';">LEVEL 82 // SKY POOL</p>
+                </div>
+            </div>
+            <div class="residence-card reveal" style="grid-column: 4 / span 8; margin-top: -10vh;">
+                <img src="nanobanana-output/ultraluxury_modern_apartment_pen_3.png" alt="Celestial Penthouse">
+                <div class="residence-info">
+                    <h3 style="font-family: 'Syncopate'; font-size: 0.8rem; letter-spacing: 0.2em;">THE CELESTIAL</h3>
+                    <p style="font-size: 0.6rem; opacity: 0.6; margin-top: 10px; font-family: 'Syncopate';">LEVEL 104 // CROWN</p>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 15vh;">
+            <a href="./residences.html" class="btn-premium">EXPLORE THE FULL COLLECTION</a>
+        </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="quote-section" style="padding: 25vh 10vw;">
+        <div class="quote-text" style="font-size: clamp(2rem, 6vw, 4.5rem);">
+            "To build vertically is not to escape the earth, but to achieve a new perspective upon it."
+        </div>
+        <p style="font-family: 'Syncopate'; font-size: 0.6rem; color: var(--gold); margin-top: 5rem; letter-spacing: 0.6em;">— ELARA VANCE, CHIEF ARCHITECT</p>
+    </section>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-brand"><h2>AETHERIA</h2></div>
+            <div class="footer-links">
+                <h4>SECTORS</h4>
+                <ul>
+                    <li><a href="./index.html">00 // HOME</a></li>
+                    <li><a href="./vision.html">01 // THE VISION</a></li>
+                    <li><a href="./ascent.html">02 // THE ASCENT</a></li>
+                    <li><a href="./residences.html">03 // THE RESIDENCES</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>ACCESS</h4>
+                <ul>
+                    <li><a href="./tour.html">04 // REQUEST ACCESS</a></li>
+                    <li><a href="mailto:concierge@aetheria.heights">05 // CONCIERGE</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>LEGAL</h4>
+                <ul>
+                    <li><a href="#">PRIVACY ARCHIVE</a></li>
+                    <li><a href="#">TERMS OF SERVICE</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>COORD: [40.7128° N, 74.0060° W]</div>
+            <div>© 2026 ARCHITECTURAL MONOLITH DEVELOPMENTS</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

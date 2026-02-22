@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHERIA | The Residences</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="residences-page">
+
+    <div id="loader"><div class="loader-text">ACCESSING GALLERY...</div></div>
+    <div class="page-transition"></div>
+    <div id="canvas-container"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <!-- HUD -->
+    <div class="hud-element hud-logo"><a href="./index.html" class="logo-v">AETHERIA</a></div>
+    <div class="hud-element hud-menu-trigger">
+        <button class="menu-btn" id="menuToggle"><span></span><span></span></button>
+    </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-nav">
+            <a href="./index.html"><span>00</span>HOME</a>
+            <a href="./vision.html"><span>01</span>THE VISION</a>
+            <a href="./ascent.html"><span>02</span>THE ASCENT</a>
+            <a href="./residences.html"><span>03</span>RESIDENCES</a>
+            <a href="./tour.html"><span>04</span>ACCESS</a>
+        </div>
+    </div>
+
+    <!-- Premium Modal -->
+    <div class="premium-modal" id="residenceModal">
+        <button class="close-modal" id="closeModal"><span></span><span></span></button>
+        <div class="modal-container">
+            <div class="modal-left">
+                <img src="" id="modalFloorplan" alt="Floorplan">
+            </div>
+            <div class="modal-right">
+                <div>
+                    <h2 class="modal-title" id="modalTitle">THE AZURE</h2>
+                    <p class="modal-subtitle" id="modalSubtitle">LEVEL 82 // RESIDENCE A</p>
+                    
+                    <div class="modal-specs">
+                        <div class="spec-item"><h5>AREA</h5><p id="modalArea">4,200 SQ FT</p></div>
+                        <div class="spec-item"><h5>BEDROOMS</h5><p id="modalBed">4</p></div>
+                        <div class="spec-item"><h5>BATHROOMS</h5><p id="modalBath">4.5</p></div>
+                        <div class="spec-item"><h5>EXPOSURE</h5><p>NORTH / EAST</p></div>
+                    </div>
+                    
+                    <p class="modal-desc" id="modalDesc">
+                        A masterwork of vertical living, featuring triple-exposure views and a private sky-terrace.
+                    </p>
+                </div>
+                
+                <a href="./tour.html" class="btn-premium" style="width: fit-content;">REQUEST PRIVATE VIEWING</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Silky Horizontal Gallery -->
+    <div id="galleryWrapper" class="gallery-wrapper">
+        <div class="gallery-card residence-trigger" 
+             data-title="THE AZURE" 
+             data-subtitle="LEVEL 82 // SUITE A"
+             data-area="4,250 SQ FT"
+             data-bed="4"
+             data-bath="4.5"
+             data-floorplan="nanobanana-output/ultraluxury_architectural_floor_.png"
+             data-desc="Perched on the 82nd floor, The Azure offers an unparalleled vantage point of the Atlantic horizon. Every inch is finished in hand-selected Greek marble and brushed brass.">
+            <img src="nanobanana-output/ultraluxury_modern_apartment_pen_1.png" alt="Azure Suite">
+            <div style="position: absolute; bottom: 40px; left: 40px; font-family: 'Syncopate'; font-size: 0.8rem; color: #fff;">THE AZURE SUITE // LEVEL 82</div>
+        </div>
+        
+        <div class="gallery-card residence-trigger"
+             data-title="THE CELESTIAL" 
+             data-subtitle="LEVEL 104 // CROWN"
+             data-area="8,400 SQ FT"
+             data-bed="6"
+             data-bath="7.5"
+             data-floorplan="nanobanana-output/ultraluxury_architectural_floor__1.png"
+             data-desc="The pinnacle of Aetheria. A full-floor residence at the tower's summit, featuring 360-degree views, a private internal elevator, and a double-height grand salon.">
+            <img src="nanobanana-output/ultraluxury_modern_apartment_pen_3.png" alt="Celestial Penthouse">
+            <div style="position: absolute; bottom: 40px; left: 40px; font-family: 'Syncopate'; font-size: 0.8rem; color: #fff;">THE CELESTIAL // LEVEL 104</div>
+        </div>
+        
+        <div class="gallery-card residence-trigger"
+             data-title="THE OBSERVATORY" 
+             data-subtitle="LEVEL 90 // SUITE B"
+             data-area="3,800 SQ FT"
+             data-bed="3"
+             data-bath="3.5"
+             data-floorplan="nanobanana-output/ultraluxury_architectural_floor__2.png"
+             data-desc="Designed for the curator. A gallery-inspired layout with integrated museum-grade lighting and seamless floor-to-ceiling glass transitions.">
+            <img src="nanobanana-output/ultraluxury_modern_apartment_pen.png" alt="Observatory">
+            <div style="position: absolute; bottom: 40px; left: 40px; font-family: 'Syncopate'; font-size: 0.8rem; color: #fff;">THE OBSERVATORY // LEVEL 90</div>
+        </div>
+        
+        <div class="gallery-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(255,255,255,0.02); border: 1px solid var(--gold-dim);">
+            <h3 style="font-family: 'Libre Baskerville'; font-size: 2.5rem; font-style: italic; color: var(--gold); text-align: center; margin-bottom: 2rem;">BEYOND THE<br>HORIZONTAL</h3>
+            <a href="./tour.html" class="btn-premium">INQUIRE FOR ACCESS</a>
+        </div>
+    </div>
+    
+    <div style="position: fixed; bottom: 5vh; left: 5vw; font-family: 'Syncopate'; font-size: 0.5rem; letter-spacing: 0.3em; opacity: 0.4;">
+        CLICK IMAGE FOR FLOORPLAN // SCROLL TO EXPLORE
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
