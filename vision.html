@@ -17,9 +17,14 @@
     <div class="cursor-circle"></div>
 
     <!-- HUD -->
-    <div class="hud-element hud-logo"><a href="./index.html" class="logo-v">AETHERIA</a></div>
+    <div class="hud-element hud-logo">
+        <div class="status-indicator">
+            <div class="status-dot"></div>
+            <span>ZENITH STATUS: OPTIMAL</span>
+        </div>
+        <a href="./index.html" class="logo-v">AETHERIA</a>
+    </div>
     <div class="hud-element hud-menu-trigger">
-        <span class="menu-label">INDEX</span>
         <button class="menu-btn" id="menuToggle"><span></span><span></span></button>
     </div>
     <div class="hud-element hud-coords"><span>SECTOR: VISION</span><span>ARCHIVE: 001</span></div>
@@ -38,26 +43,36 @@
     <!-- Content -->
     <div class="blueprint-grid">
         <div class="blueprint-sticky">
-            <h1 style="font-family: 'Syncopate'; font-size: 3rem; color: var(--gold); line-height: 1;">THE<br>BLUEPRINT</h1>
-            <p style="margin-top: 2rem; font-family: 'Inter'; font-size: 0.8rem; opacity: 0.6; letter-spacing: 0.2em;">TECHNICAL SPECIFICATIONS<br>REVISION 4.2</p>
+            <h1 style="font-family: 'Libre Baskerville'; font-size: clamp(3rem, 8vw, 6rem); color: var(--white); line-height: 1; font-style: italic;">THE<br>BLUEPRINT</h1>
+            <p style="margin-top: 3rem; font-family: 'Syncopate'; font-size: 0.6rem; color: var(--gold); letter-spacing: 0.4em; line-height: 2;">TECHNICAL SPECIFICATIONS<br>ARCHITECTURAL REVISION 4.2.0</p>
+            <div style="margin-top: 4rem; border-top: 1px solid var(--gold-dim); padding-top: 2rem;">
+                <p style="font-size: 0.7rem; opacity: 0.4; letter-spacing: 0.1em; line-height: 1.8;">All structural data is classified under the Architectural Monolith protocol. Access granted for demonstration purposes only.</p>
+            </div>
         </div>
         
         <div class="blueprint-content">
             <div class="blueprint-detail reveal">
-                <h3>01. THE FOUNDATION</h3>
+                <h3 style="font-family: 'Syncopate'; font-size: 0.8rem; color: var(--gold); letter-spacing: 0.3em; margin-bottom: 1.5rem;">01. THE FOUNDATION</h3>
                 <p>Anchored into the bedrock of Manhattan, the foundation utilizes a proprietary seismic dampening system derived from aerospace engineering. It is not merely a base; it is a root system for the vertical city.</p>
-                <img src="nanobanana-output/abstract_architectural_texture_d.png" style="width: 100%; margin-top: 2rem; opacity: 0.8;">
+                <div class="architectural-img" style="margin-top: 3rem; height: 50vh;">
+                    <img src="nanobanana-output/abstract_architectural_texture_d.png" alt="Foundation Detail">
+                </div>
             </div>
             
             <div class="blueprint-detail reveal">
-                <h3>02. THE SKIN</h3>
+                <h3 style="font-family: 'Syncopate'; font-size: 0.8rem; color: var(--gold); letter-spacing: 0.3em; margin-bottom: 1.5rem;">02. THE SKIN</h3>
                 <p>The exterior façade is composed of 4,000 unique panels of triple-laminated glass, infused with a microscopic gold mesh that filters UV light while bathing the interior in a perpetual golden hour glow.</p>
-                <img src="nanobanana-output/abstract_architectural_texture_d_2.png" style="width: 100%; margin-top: 2rem; opacity: 0.8;">
+                <div class="architectural-img" style="margin-top: 3rem; height: 50vh;">
+                    <img src="nanobanana-output/abstract_architectural_texture_d_2.png" alt="Skin Detail">
+                </div>
             </div>
             
-            <div class="blueprint-detail reveal">
-                <h3>03. THE VOID</h3>
+            <div class="blueprint-detail reveal" style="padding-bottom: 10vh;">
+                <h3 style="font-family: 'Syncopate'; font-size: 0.8rem; color: var(--gold); letter-spacing: 0.3em; margin-bottom: 1.5rem;">03. THE VOID</h3>
                 <p>Negative space is the ultimate luxury. Aetheria features a central hollow core that allows natural light to penetrate the deepest corridors, creating a chimney effect for natural ventilation.</p>
+                <div class="architectural-img" style="margin-top: 3rem; height: 50vh;">
+                    <img src="nanobanana-output/abstract_architectural_texture_d_3.png" alt="Void Detail">
+                </div>
             </div>
         </div>
     </div>
@@ -66,12 +81,32 @@
         <div class="footer-main">
             <div class="footer-brand"><h2>AETHERIA</h2></div>
             <div class="footer-links">
-                <h4>NAVIGATION</h4>
+                <h4>SECTORS</h4>
                 <ul>
-                    <li><a href="./ascent.html">NEXT: THE ASCENT</a></li>
-                    <li><a href="./residences.html">RESIDENCES</a></li>
+                    <li><a href="./index.html">00 // HOME</a></li>
+                    <li><a href="./vision.html">01 // THE VISION</a></li>
+                    <li><a href="./ascent.html">02 // ASCENT</a></li>
+                    <li><a href="./residences.html">03 // THE RESIDENCES</a></li>
                 </ul>
             </div>
+            <div class="footer-links">
+                <h4>ACCESS</h4>
+                <ul>
+                    <li><a href="./tour.html">04 // REQUEST ACCESS</a></li>
+                    <li><a href="mailto:concierge@aetheria.heights">05 // CONCIERGE</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>LEGAL</h4>
+                <ul>
+                    <li><a href="#">PRIVACY ARCHIVE</a></li>
+                    <li><a href="#">TERMS OF SERVICE</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>COORD: [VISION.BLUEPRINT.001]</div>
+            <div>© 2026 ARCHITECTURAL MONOLITH DEVELOPMENTS</div>
         </div>
     </footer>
 

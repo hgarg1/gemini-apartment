@@ -17,7 +17,13 @@
     <div class="cursor-circle"></div>
 
     <!-- HUD -->
-    <div class="hud-element hud-logo"><a href="./index.html" class="logo-v">AETHERIA</a></div>
+    <div class="hud-element hud-logo">
+        <div class="status-indicator">
+            <div class="status-dot"></div>
+            <span>ZENITH STATUS: OPTIMAL</span>
+        </div>
+        <a href="./index.html" class="logo-v">AETHERIA</a>
+    </div>
     <div class="hud-element hud-menu-trigger">
         <button class="menu-btn" id="menuToggle"><span></span><span></span></button>
     </div>
@@ -25,11 +31,11 @@
     <!-- Menu Overlay -->
     <div class="menu-overlay" id="menuOverlay">
         <div class="menu-nav">
-            <a href="./index.html"><span>00</span>HOME</a>
-            <a href="./vision.html"><span>01</span>THE VISION</a>
-            <a href="./ascent.html"><span>02</span>THE ASCENT</a>
-            <a href="./residences.html"><span>03</span>RESIDENCES</a>
-            <a href="./tour.html"><span>04</span>ACCESS</a>
+            <a href="./index.html" class="menu-link"><span>00</span>HOME</a>
+            <a href="./vision.html" class="menu-link"><span>01</span>THE VISION</a>
+            <a href="./ascent.html" class="menu-link"><span>02</span>THE ASCENT</a>
+            <a href="./residences.html" class="menu-link"><span>03</span>RESIDENCES</a>
+            <a href="./tour.html" class="menu-link"><span>04</span>ACCESS</a>
         </div>
     </div>
 
@@ -97,9 +103,14 @@
         </div>
     </div>
     
-    <div style="position: fixed; bottom: 5vh; left: 5vw; font-family: 'Syncopate'; font-size: 0.5rem; letter-spacing: 0.3em; opacity: 0.4;">
+    <div style="position: fixed; bottom: 5vh; left: 5vw; font-family: 'Syncopate'; font-size: 0.5rem; letter-spacing: 0.3em; opacity: 0.4; z-index: 100;">
         SCROLL TO EXPLORE // CLICK FOR BLUEPRINT
     </div>
+
+    <footer style="position: fixed; bottom: 0; left: 0; width: 100%; padding: 20px 5vw; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); border-top: 1px solid var(--gold-dim); display: flex; justify-content: space-between; align-items: center; z-index: 500;">
+        <div style="font-family: 'Syncopate'; font-size: 0.5rem; color: var(--gold); letter-spacing: 0.2em; opacity: 0.5;">AETHERIA // GALLERY</div>
+        <div style="font-family: 'Syncopate'; font-size: 0.4rem; color: #fff; letter-spacing: 0.1em; opacity: 0.3;">© 2026 ARCHITECTURAL MONOLITH DEVELOPMENTS</div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
