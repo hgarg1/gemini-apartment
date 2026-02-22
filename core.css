@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@100;200;300;400&display=swap');
+
+:root {
+    --gold: #c5a059;
+    --gold-bright: #e5c185;
+    --gold-dim: rgba(197, 160, 89, 0.15);
+    --dark: #070707;
+    --dark-grey: #121212;
+    --light: #e0e0e0;
+    --white: #ffffff;
+    --transition: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+    background-color: var(--dark);
+    color: var(--light);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    cursor: none !important;
+}
+
+body::before {
+    content: "";
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+    opacity: 0.04; z-index: 15000; pointer-events: none;
+}
+
+/* --- HUD ELEMENTS --- */
+.hud-element { position: fixed; z-index: 2000; font-family: 'Syncopate', sans-serif; pointer-events: auto; }
+.hud-logo { top: 40px; left: 40px; }
+.logo-v { writing-mode: vertical-rl; transform: rotate(180deg); color: var(--white); text-decoration: none; font-weight: 700; letter-spacing: 0.8em; font-size: 0.75rem; }
+.status-indicator { display: flex; align-items: center; gap: 10px; font-size: 0.45rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 20px; }
+.status-dot { width: 5px; height: 5px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 10px var(--gold); animation: pulse 2s infinite; }
+.hud-menu-trigger { top: 40px; right: 40px; }
+.menu-btn { width: 54px; height: 54px; background: var(--gold-dim); border: 1px solid var(--gold); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 7px; cursor: pointer; }
+.menu-btn span { width: 24px; height: 1px; background: var(--white); }
+.hud-coords { bottom: 40px; left: 40px; font-size: 0.5rem; letter-spacing: 0.3em; opacity: 0.4; pointer-events: none; }
+.hud-inquiry { bottom: 40px; right: 40px; }
+.btn-vertical { writing-mode: vertical-rl; padding: 45px 15px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.55rem; letter-spacing: 0.5em; font-family: 'Syncopate'; }
+
+/* OVERLAYS */
+#loader {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--dark); z-index: 10000;
+    display: flex; justify-content: center; align-items: center;
+}
+#loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; transition: 0.8s; }
+.loader-text { font-family: 'Syncopate'; font-size: 0.6rem; letter-spacing: 1.2em; color: var(--gold); animation: pulse 2s infinite; }
+
+.page-transition {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--dark); z-index: 9000;
+    transform: scaleY(0); transform-origin: bottom;
+    pointer-events: none; visibility: hidden;
+}
+.page-transition.active { visibility: visible; transform: scaleY(1); pointer-events: auto; transition: transform 0.8s var(--transition); }
+
+#canvas-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.25; pointer-events: none; }
+
+.menu-overlay { 
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    background: var(--dark); z-index: 8000; 
+    display: flex; flex-direction: column; justify-content: center; 
+    padding: 0 10vw; clip-path: circle(0% at 100% 0%); 
+    transition: clip-path 1s var(--transition);
+    pointer-events: none; visibility: hidden;
+}
+.menu-overlay.active { clip-path: circle(150% at 100% 0%); pointer-events: auto; visibility: visible; }
+.menu-nav a { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 7vw, 5.5rem); text-decoration: none; color: var(--white); display: block; margin-bottom: 1.5rem; font-style: italic; }
+
+.cursor-dot { position: fixed; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; pointer-events: none; z-index: 12000; }
+.cursor-circle { position: fixed; width: 44px; height: 44px; border: 1px solid var(--gold-dim); border-radius: 50%; pointer-events: none; z-index: 12000; }
+
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }

@@ -1,0 +1,76 @@
+/* --- RESIDENCES HORIZONTAL GALLERY --- */
+body { overflow: hidden !important; }
+
+.gallery-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 15vw;
+    will-change: transform;
+}
+
+.gallery-card {
+    flex: 0 0 65vw;
+    height: 70vh;
+    margin-right: 10vw;
+    position: relative;
+    overflow: hidden;
+    background: #111;
+    border: 1px solid var(--gold-dim);
+    cursor: pointer;
+    transition: border 0.4s;
+}
+.gallery-card:hover { border: 1px solid var(--gold); }
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: transform 1.2s var(--transition);
+    pointer-events: none;
+}
+.gallery-card:hover img { transform: scale(1.05); }
+
+.gallery-label {
+    position: absolute; bottom: 40px; left: 40px;
+    font-family: 'Syncopate'; font-size: 0.8rem; color: #fff;
+    letter-spacing: 0.2em; text-transform: uppercase;
+}
+
+/* --- PREMIUM MODAL --- */
+.premium-modal {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95); z-index: 11000;
+    display: none; align-items: center; justify-content: center;
+    backdrop-filter: blur(20px); opacity: 0; transition: opacity 0.6s var(--transition);
+    pointer-events: none;
+}
+.premium-modal.active { display: flex; opacity: 1; pointer-events: auto; }
+
+.modal-container {
+    width: 90vw; height: 85vh;
+    background: #0a0a0a; border: 1px solid var(--gold-dim);
+    display: flex; overflow: hidden;
+}
+
+.modal-left { flex: 1.5; background: #050505; display: flex; align-items: center; justify-content: center; padding: 40px; border-right: 1px solid var(--gold-dim); }
+.modal-left img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.modal-right { flex: 1; padding: 60px; display: flex; flex-direction: column; justify-content: space-between; }
+.modal-title { font-family: 'Libre Baskerville'; font-size: 3.5rem; color: var(--white); font-style: italic; }
+.modal-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 2rem; }
+.spec-item h5 { font-family: 'Syncopate'; font-size: 0.5rem; color: #555; margin-bottom: 0.5rem; }
+.spec-item p { font-size: 1.2rem; color: var(--white); font-weight: 200; }
+
+.close-modal { position: absolute; top: 40px; right: 40px; width: 40px; height: 40px; background: transparent; border: none; cursor: pointer; z-index: 10; }
+.close-modal span { position: absolute; width: 100%; height: 1px; background: var(--white); transform: rotate(45deg); left: 0; }
+.close-modal span:nth-child(2) { transform: rotate(-45deg); }
+
+.btn-premium { display: inline-flex; padding: 20px 40px; border: 1px solid var(--gold); color: var(--white); text-decoration: none; font-family: 'Syncopate'; font-size: 0.6rem; letter-spacing: 0.3em; transition: 0.4s; background: transparent; text-transform: uppercase; cursor: pointer; }
+.btn-premium:hover { background: var(--gold); color: var(--dark); }
+
+@media (max-width: 1100px) {
+    .modal-container { flex-direction: column; overflow-y: auto; }
+    .gallery-card { flex: 0 0 85vw; }
+}
